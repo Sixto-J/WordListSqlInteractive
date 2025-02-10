@@ -27,7 +27,10 @@ import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 /**
  * Implements a RecyclerView that displays a list of words from a SQL database.
@@ -82,9 +85,11 @@ public class MainActivity extends AppCompatActivity {
      */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.main_menu, menu);
         return true;
     }
+
+
 
     /**
      * Handles app bar item clicks.
@@ -92,15 +97,19 @@ public class MainActivity extends AppCompatActivity {
      * @param item  Item clicked.
      * @return      Returns true if one of the defined items was clicked.
      */
+
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.action_search) {// Starts search activity.
-            Intent intent = new Intent(getBaseContext(), com.android.example.wordlistsqlsearchable.SearchActivity.class);
+            Intent intent = new Intent(getBaseContext(), com.example.wordlistsqlinteractive.SearchActivity.class);
             startActivity(intent);
             return true;
         }
         return super.onOptionsItemSelected(item);
     }
+
+
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -129,4 +138,4 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
-}}
+}
