@@ -27,6 +27,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -65,6 +66,17 @@ public class MainActivity extends AppCompatActivity {
         // Give the recycler view a default layout manager.
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+
+
+
+
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+
+
+
         // Add a floating action click handler for creating new entries.
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -102,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.action_search) {// Starts search activity.
-            Intent intent = new Intent(getBaseContext(), com.example.wordlistsqlinteractive.SearchActivity.class);
+            Intent intent = new Intent(getBaseContext(), SearchActivity.class);
             startActivity(intent);
             return true;
         }

@@ -1,1 +1,2 @@
 https://github.com/google-developer-training/android-fundamentals/blob/master/WordListSqlSearchable/
+https://google-developer-training.github.io/android-developer-fundamentals-course-practicals/en/Unit%204/101b_p_searching_an_sqlite_database.html

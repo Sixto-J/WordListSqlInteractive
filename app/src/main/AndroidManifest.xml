@@ -22,8 +22,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.wordlistsqlinteractive.SearchActivity">
+            android:name=".SearchActivity">
         </activity>
+        <activity android:name=".EditWordActivity" />
     </application>
 
 </manifest>
